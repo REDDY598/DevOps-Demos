@@ -1,0 +1,19 @@
+tomcat-user.xml
+
+<role rolename="admin-gui"/>
+<role rolename="manager-gui"/>
+<role rolename="manager-jmx"/>
+<role rolename="manager-status"/>
+<user username="admin" password="admin" roles="manager-gui, manager-script, manager-jmx, manager-status"/>
+<user username="deployer" password="deployer" roles="manager-script"/>
+<user username="tomcat" password="tomcat" roles="manager-gui"/>
+
+tomcatup
+ln -s /home/ec2-user/opt/tomcat-8/bin/startup.sh /usr/local/bin/tomcatup
+
+tomcatdown
+ln -s /home/ec2-user/opt/tomcat-8/bin/shutdown.sh /usr/local/bin/tomcatdown
+
+comment in xml
+<!..  
+           ..>
